@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class MiVentana extends JFrame{
@@ -47,7 +48,8 @@ public class MiVentana extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				jresult.setText("Suma: " + (Integer.parseInt(t1.getText()) + (Integer.parseInt(t2.getText()))));
+				//jresult.setText("Suma: " + (Integer.parseInt(t1.getText()) + (Integer.parseInt(t2.getText()))));
+				JOptionPane.showMessageDialog(jb1, "Suma: " + (Integer.parseInt(t1.getText()) + (Integer.parseInt(t2.getText()))));
 			}
 		};
 		
