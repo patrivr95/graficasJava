@@ -1,6 +1,5 @@
 package presentacion.graficos;
 
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -10,7 +9,7 @@ import javax.swing.JLabel;
 public class MiVentana extends JFrame {
 	public MiVentana() {
 		//título ventana. Esta instrucción tiene que ser la primera
-		super("Primera ventana");
+		super("Ventana eventos");
 		// modificar el comportamiento del botón de cierre
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		// tamaño y posición
@@ -42,7 +41,8 @@ public class MiVentana extends JFrame {
 				jl1.setText("Primer evento");
 			}
 		};*/
-		// evento con expresion lambda
+		// evento con expresion lambda. Puede ir al final o antes del add
 		ActionListener action = e->jl1.setText("Primer evento");
+		jb1.addActionListener(action);
 	}
 }
