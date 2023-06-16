@@ -4,14 +4,14 @@ import java.util.List;
 
 import javax.swing.DefaultComboBoxModel;
 
-import model.Pais;
 import service.PaisesService;
+import service.PaisesServiceFactory;
 
-public class AdaptadorComboPaises extends DefaultComboBoxModel<String> {
+public class AdaptadorListaPaises extends DefaultComboBoxModel<String> {
 	
 	List<String> continentes;
-	public AdaptadorComboPaises() {
-		PaisesService service = new PaisesService();
+	public AdaptadorListaPaises() {
+		PaisesService service =PaisesServiceFactory.getPaisesService();
 		continentes = service.continentes();
 	}
 	
